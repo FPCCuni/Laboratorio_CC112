@@ -58,6 +58,12 @@ https:www.geeksforgeeks.org/how-to-setup-vscode-with-c-c-and-python-for-competit
     la imagen solo horizontalmente o verticalmente, y otras veces puede querer redimensionarla tanto horizontal como verticalmente.
     Implemente una función versatil que se adapte a las necesidades del usuario.
 
-  * **Tipos de recursividad** Implemente el factorial de un número utilizando los diferentes tipos de recursividad (simple, tail, múltiple, indirecta, anidada) 
-    
+  * **Tipos de recursividad** Implemente el factorial de un número utilizando los diferentes tipos de recursividad (simple, tail, múltiple, indirecta) 
+
+  * **Funciones anónimas**
+     1. Escriba un programa que use funciones anónimas y permita decidir si un número es par o impar
+   
+     2. Escriba un programa utilizando funciones anónimas que permita calcular la poponcia de dos enteros dados así como la suma de ellos.
+   
+   
 
