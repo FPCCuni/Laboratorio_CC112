@@ -56,14 +56,14 @@ https:www.geeksforgeeks.org/how-to-setup-vscode-with-c-c-and-python-for-competit
   * **Paso por referencia y argumentos predeterminados** Usted se encuentra escribiendo un programa de procesamiento de imágenes
     y desea implementar una función para redimensionar una imagen. Sin embargo, a veces el usuario puede querer redimensionar
     la imagen solo horizontalmente o verticalmente, y otras veces puede querer redimensionarla tanto horizontal como verticalmente.
-    Implemente una función versatil que se adapte a las necesidades del usuario.
+    Implemente una función versatil que se adapte a las necesidades del usuario. (TAREA)
 
   * **Tipos de recursividad** Implemente el factorial de un número utilizando los diferentes tipos de recursividad (simple, tail, múltiple, indirecta) 
 
   * **Funciones anónimas**
      1. Escriba un programa que use funciones anónimas y permita decidir si un número es par o impar
    
-     2. Escriba un programa utilizando funciones anónimas que permita calcular la potencia de dos enteros dados así como la suma de ellos.
+     2. Escriba un programa utilizando funciones anónimas que permita calcular la potencia de dos enteros dados así como la suma de ellos. (TAREA)
    
    
 
