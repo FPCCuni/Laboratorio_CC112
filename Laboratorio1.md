@@ -63,7 +63,7 @@ https:www.geeksforgeeks.org/how-to-setup-vscode-with-c-c-and-python-for-competit
   * **Funciones anónimas**
      1. Escriba un programa que use funciones anónimas y permita decidir si un número es par o impar
    
-     2. Escriba un programa utilizando funciones anónimas que permita calcular la poponcia de dos enteros dados así como la suma de ellos.
+     2. Escriba un programa utilizando funciones anónimas que permita calcular la potencia de dos enteros dados así como la suma de ellos.
    
    
 
