@@ -65,5 +65,7 @@ https:www.geeksforgeeks.org/how-to-setup-vscode-with-c-c-and-python-for-competit
    
      2. Escriba un programa utilizando funciones anónimas que permita calcular la potencia de dos enteros dados así como la suma de ellos. (TAREA)
    
-   
+
+   * Escriba una función que permita incrementar en un número dado por usuario los elementos de un arreglo. Escriba otra función que haga lo mismo pero utilizando
+     la clase vector (``#include <vector>``). Qué direfencia encuentra entre ambas implmentaciones (TAREA)
 
