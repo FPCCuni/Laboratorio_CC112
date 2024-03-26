@@ -67,5 +67,5 @@ https:www.geeksforgeeks.org/how-to-setup-vscode-with-c-c-and-python-for-competit
    
 
    * Escriba una función que permita incrementar en un número dado por usuario los elementos de un arreglo. Escriba otra función que haga lo mismo pero utilizando
-     la clase vector (``#include <vector>``). Qué direfencia encuentra entre ambas implmentaciones (TAREA)
+     la clase vector (``#include <vector>``). Qué direfencia encuentra entre ambas implementaciones (TAREA)
 
