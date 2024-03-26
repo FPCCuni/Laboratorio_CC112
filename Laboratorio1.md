@@ -43,7 +43,7 @@
  
   - que en este caso es main
  
-  - Puede omitirlo, en este caso basta poner  ``g++ -std=c++11 main.cpp``
+  - Puede omitirlo, en este caso basta poner  ``g++ main.cpp``
     Su ejecutable sera de la forma a.out
 
  * Puede mejorar la configuración de VS Code de acuerdo a sus necesidades, por ejemplo, puede revisar  el siguiente
