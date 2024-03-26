@@ -3,15 +3,6 @@ arreglo de enteros devuelva la diferencia
 entre elementos más separados. Ejemplo
 input [17,29,11,4,20,8] output 25*/
 
-/*#include <chrono> 
-using namespace std::chrono;
-auto start = high_resolution_clock::now();
-auto stop = high_resolution_clock::now();
-
-auto duration = duration_cast<microseconds>(stop - start);
-cout << "Tiempo tomado por algq: " << duration.count() << " microseconds" << endl;
-*/
-
 #include <iostream>
 #include <cmath> // para abs()
 
