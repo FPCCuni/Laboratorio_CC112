@@ -1,8 +1,3 @@
-/*Escribir una función que dado un
-arreglo de enteros devuelva la diferencia
-entre elementos más separados. Ejemplo
-input [17,29,11,4,20,8] output 25*/
-
 #include <iostream>
 #include <cmath> // para abs()
 
