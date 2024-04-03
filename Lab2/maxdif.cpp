@@ -1,9 +1,5 @@
 #include <iostream>
 #include <cmath> // para abs()
-
-
-
-
 using namespace std;
 
 int maxdif1(int a[], int tam){
