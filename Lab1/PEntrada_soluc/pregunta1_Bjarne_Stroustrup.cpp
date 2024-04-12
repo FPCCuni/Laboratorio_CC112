@@ -4,8 +4,9 @@ using namespace std;
 int main() {
     int numero;
     int suma = 0;
-
-    cout << "Ingrese 5 números enteros:" << endl;
+    int cont = 0;
+    while(cont < 2){
+    cout << "Ingrese 5 numeros enteros:" << endl;
     for (int i = 0; i < 5; ++i) {
         cin >> numero;
         suma += numero;
@@ -14,7 +15,11 @@ int main() {
     // Calculo del promedio
     float promedio = (float) suma/5; //equivalente en C++ static_cast<float>(suma)/5;
    
-    cout << "El promedio de los 5 números enteros ingresados es: " << promedio << endl;
+    cout << "El promedio es: " << promedio << endl;
+    cout << "\n";
+	cont ++;
+	}
+    
 
     return 0;
 }

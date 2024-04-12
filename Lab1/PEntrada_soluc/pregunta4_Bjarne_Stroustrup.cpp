@@ -5,10 +5,12 @@ using namespace std;
 
 int main() {
     int matriz[3][3];
-    int mayor = 20, menor = 100; 
-
-    srand(time(0));
+    int mayor = 20, menor = 100;
+	int cont = 0; 
     
+    srand(time(0));
+    while (cont < 3){
+    	
     cout << "Matriz generada:" << endl;
     
     for (int i = 0; i < 3; ++i) {
@@ -25,7 +27,12 @@ int main() {
 
     cout << "\nEl mayor elemento de la matriz es: " << mayor << endl;
     cout << "El menor elemento de la matriz es: " << menor << endl;
+	cout << "\n";
+    	
+    	cont++;
+	}
 
+    
     return 0;
 }
 

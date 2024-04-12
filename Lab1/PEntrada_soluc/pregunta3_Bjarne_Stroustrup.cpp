@@ -3,8 +3,12 @@ using namespace std;
 
 int main() {
     int n;
+    int cont = 0;
 
-    cout << "Ingrese un entero no negativo: ";
+
+    while(cont < 3){
+    	
+    	cout << "Ingrese un entero no negativo: ";
     cin >> n;
 
     // control de filas
@@ -20,6 +24,10 @@ int main() {
         }
         cout << endl;
     }
+    cout << "\n";
+    	cont++;
+	}
+    
 
     return 0;
 }
