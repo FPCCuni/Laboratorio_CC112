@@ -66,14 +66,14 @@ Hay dos formas en que se asigna memoria para el almacenamiento de datos:
   ```
 * Para arreglos creados dinámicamente, puede usar notación de desplazamiento (aritmética) de puntero  o tratar el puntero como el nombre de un arreglo y usar la notación de corchetes estándar:
   ```cpp
-  double * numList = new double[tam]; // matriz dinámica
+  double * listaNum = new double[tam]; // arreglo dinámico
 
   for (int i = 0; i < tam; i++)
-      ListaNum[i] = 0; // inicializa los elementos del arreglo a 0
+      listaNum[i] = 0; // inicializa los elementos del arreglo a 0
 
-  ListaNum[5] = 20; // notación entre corchetes
+  listaNum[5] = 20; // notación entre corchetes
   *(listaNum + 7) = 15; // notación de desplazamiento de puntero
-		// significa lo mismo que numList[7]
+		// significa lo mismo que listNum[7]
   ```
 
 ### Desasignación de memoria dinámica con ``delete``
