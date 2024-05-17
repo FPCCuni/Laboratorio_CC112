@@ -12,6 +12,43 @@ Hay dos formas en que se asigna memoria para el almacenamiento de datos:
    * El compilador no necesita conocer de antemano la cantidad exacta de espacio o el número de elementos.
    * Para la asignación de memoria dinámica, **los punteros son cruciales.**
 
+## Punteros (resumen)
+* Los **punteros son direcciones** de las ubicaciones en memoria donde viven las variables. Podemos interpretarlo en términos de cajas 
+```cpp
+int k; // caja llamada k
+k = 5 //  ponemos 5 en la caja
+int *pk; // caja llamada pk
+pk = &k; // ponemos la direccion de k  |0x123434|
+// En  lugar de la direccion la representamos  con una flecha.
+//pk  nos da la infomación que necesitamos para encontrar k en memoria
+```  
+## Memoria
+* Cada archivo en un pc vive en su unidad de disco (HDD o SSD)
+
+* Las unidades de disco son un espacio de almacenamiento, no podemos trabajar directamente ahí. La manipulación y el uso de datos solo puede hacerse en en la RAM (Random Acces Memory).
+
+* La memoria es básicamente un gran arreglo de 8 bytes de ancho.
+    512 Mb, 1Gb, 2Gb, 4Gb,..
+
+    ![alt text](image-1.png)
+
+    ![alt text](image-2.png)
+
+    ![alt text](image-3.png)
+
+| Tipo de Datos |tamaño(bytes)|
+|---------------|-------------|
+| int           |  4          |
+|   char        | 1           | 
+| float         | 4           |
+|double         |  8          | 
+|long long      |  8          |
+| string        |  ???        |
+| char* int*    |   ???       |
+|float* double* |    ???      |
+
+* Podemos pensar en string como un alias para char*, su tamaño dependerá del compilador y el SO.
+
 ## Asignación de memoria dinámica
 * Podemos asignar dinámicamente espacio de almacenamiento mientras el programa se está ejecutando, pero no podemos crear nuevos nombres de variables "sobre la marcha".
 
@@ -48,6 +85,7 @@ Hay dos formas en que se asigna memoria para el almacenamiento de datos:
   p = new int; // asigna dinámicamente un int y carga la dirección en p
   double *d; // declaramos un puntero d
   d = new double; // asigna dinámicamente una dirección doble y carga en d
+
   // también podemos hacer esto en declaraciones de una sola línea
   int x = 40;
   int * lista = new int[x];
@@ -58,44 +96,50 @@ Hay dos formas en que se asigna memoria para el almacenamiento de datos:
 ### Acceder al espacio creado dinámicamente
 * Una vez que el espacio se ha asignado dinámicamente, ¿cómo lo utilizamos?
 
-* Para elementos individuales, pasamos por el puntero. Elimine la referencia del puntero (desreferenciar) para alcanzar el objeto creado dinámicamente:
+* **Para elementos individuales**, pasamos por el puntero. Elimine la referencia del puntero (desreferenciar) para alcanzar el objeto creado dinámicamente:
   ```cpp
   int * p = new int; // entero dinámico, señalado por p
   *p = 10; // asigna 10 al entero dinámico
   cout << *p; // imprime 10
   ```
-* Para arreglos creados dinámicamente, puede usar notación de desplazamiento (aritmética) de puntero  o tratar el puntero como el nombre de un arreglo y usar la notación de corchetes estándar:
+* **Para arreglos creados dinámicamente**, tenemos 2 alternativas: 
+    1. Puede usar notación de desplazamiento (aritmética) de puntero  o 
+    
+    2. tratar el puntero como el nombre de un arreglo y usar la notación de corchetes estándar:
   ```cpp
+  int tam = 7;
   double * listaNum = new double[tam]; // arreglo dinámico
 
   for (int i = 0; i < tam; i++)
       listaNum[i] = 0; // inicializa los elementos del arreglo a 0
 
-  listaNum[5] = 20; // notación entre corchetes
-  *(listaNum + 7) = 15; // notación de desplazamiento de puntero
-		// significa lo mismo que listNum[7]
+  // notación entre corchetes
+  listaNum[5] = 20; 
+
+  // notación de desplazamiento de puntero
+  *(listaNum + 7) = 15; // significa lo mismo que listaNum[7]
   ```
 
 ### Desasignación de memoria dinámica con ``delete``
-* Para desasignar memoria creada con ``new`` , utilizamos el operador unario ``delete`` . El único operando debe ser un puntero que almacene la dirección del espacio que se va a desasignar:
+* Para desasignar memoria creada con ``new`` , utilizamos el operador unario ``delete`` . **El único operando debe ser un puntero** que almacene la dirección del espacio que se va a desasignar:
   ```cpp
   int * ptr = new int; // int creado dinámicamente
   //...
   delete ptr; // elimina el espacio al que apunta ptr
   ```
-  Tenga en cuenta que el puntero ptr todavía existe en este ejemplo. Se trata de una variable con nombre sujeta a un alcance y una extensión determinados en el momento de la compilación. Se puede reutilizar:
+  **Tenga en cuenta que el puntero ptr todavía existe** en este ejemplo. Se trata de una variable con nombre sujeta a un alcance y una extensión determinados en el momento de la compilación. ****Se puede reutilizar**:
   ```cpp
-  ptr = nuevo int[10]; // apunta p a un nuevo arreglo
+  ptr = new int[10]; // apunta p a un nuevo arreglo
   ```
 
-* Para desasignar una matriz dinámica, utilice la siguiente sintaxis:
+* **Para desasignar una matriz dinámica**, utilice la siguiente sintaxis:
   ```cpp
   delete [] nombre_del_puntero;
   ```
   Ejemplo:
   ```cpp
   int * lista = new int[40]; // arreglo dinámico
-
+  //...
   delete [] lista; // desasigna el arreglo
   lista = 0; // restablecer la lista al puntero nulo
   ```
@@ -103,7 +147,7 @@ Hay dos formas en que se asigna memoria para el almacenamiento de datos:
  
   **¿qué sucede si no desasigna (libera) la memoria dinámica cuando haya terminado?** 
 
-  Es importante liberar la memoria dinámica cuando ya no la necesitas porque, de lo contrario, puedes experimentar problemas de pérdida de memoria (memory leaks), lo que puede conllevar a un consumo excesivo de memoria en tu programa, provocando un mal funcionamiento del programa.
+  Es importante liberar la memoria dinámica cuando ya no la necesitas porque, de lo contrario, puede experimentar problemas de pérdida de memoria (memory leaks), lo que puede conllevar a un consumo excesivo de memoria, provocando un mal funcionamiento del programa.
     
   Algunos problemas que pueden surgir si no se libera la memoria dinámica adecuadamente incluyen:
   
@@ -183,6 +227,14 @@ Queremos cambiar el tamaño para que el arreglo lista tenga espacio para 10 núm
     ```
   
 4. Cambia el puntero. Si aún desea que el arreglo se llame "lista" (su nombre original), cambie el puntero de la lista a la nueva dirección.
-      ```cpp
-      lista = temp;
-      ```
+    ```cpp
+    lista = temp;
+    ```
+
+  Si deseamos disminuir el tamaño de un arreglo?
+
+
+
+
+
+

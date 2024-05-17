@@ -18,6 +18,12 @@ int * arregloAleatorio(int tam){
     return a;
 }
 
+void print(int * p, int tam){
+     for(int i = 0; i < tam; i++){
+        cout << p[i] << " "; 
+     }
+}
+
 int main(){
     int N;
     cout << "Ingrese el tamaño";
@@ -28,7 +34,10 @@ int main(){
     int * arr = arregloAleatorio(N);
 
     // funcion que muestre los numeros primos en el arreglo aleatorio
+    delete [] arr;
+    print(arr, N);
 
     //liberar memoria 
+    
     return 0; 
 }
