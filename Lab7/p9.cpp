@@ -8,6 +8,10 @@ struct Persona{
    string nombre;
    int edad;
 
+   Persona(string a, int h) {
+      nombre = a;
+      edad = h;
+   }
    void inicializa(string nombre, int edad){
       this -> nombre = nombre;
       this -> edad = edad;
@@ -27,8 +31,8 @@ struct Persona{
 };
 
 int main() {
-   Persona p;
-   p.inicializa("Juan", 23);
+   Persona p("Pedro", 23);
+   //p.inicializa("Juan", 23);
    p.saludo();
    cout << "\n\n";
    p.mostrar();
