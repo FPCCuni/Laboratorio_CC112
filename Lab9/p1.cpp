@@ -14,7 +14,7 @@ muestre su contenido en la consola.*/
 int main(){
     //std::ifstream archivo_entrada;
     //archivo_entrada.open("archivo1.txt");
-    std::ifstream archivo_entrada ("archivo1.txt");
+    std::ifstream archivo_entrada ("archivo1.txt", std::ios::in);
     if(!archivo_entrada){
         std::cerr << "Error al abrir el archivo. " << std::endl;
         return 1;
