@@ -2,6 +2,19 @@
 
 using namespace std;
 
+// mejorar 
+
+//void copiar( int *origen, int * destino, int tam)
+// for (int i = 0 )
+//*(dest+I) = *(origen +i)
+
+// int *fin = origen + tamaño;
+
+//while(origen < tamaño)
+//*destino = *origen
+origen++
+destino++
+
 void copiar(int array1[], int array2[], int n)
 {
     int *p = array1;
