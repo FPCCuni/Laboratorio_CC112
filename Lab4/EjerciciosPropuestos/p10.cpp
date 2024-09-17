@@ -12,8 +12,8 @@ using namespace std;
 
 //while(origen < tamaño)
 //*destino = *origen
-origen++
-destino++
+//origen++
+//destino++
 
 void copiar(int array1[], int array2[], int n)
 {
