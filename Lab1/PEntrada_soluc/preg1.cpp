@@ -12,7 +12,7 @@ int main() {
     }
 
     // Calculo del promedio
-    float promedio = (float) suma/5; //equivalente en C++ static_cast<float>(suma)/5;
+    float promedio = (float) suma/5;
    
     cout << "El promedio de los 5 números enteros ingresados es: " << promedio << endl;
 

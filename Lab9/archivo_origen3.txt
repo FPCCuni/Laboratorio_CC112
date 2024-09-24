@@ -1,0 +1,2 @@
+Ejemplo: copiar texto
+de un archivo a otro

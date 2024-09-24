@@ -46,7 +46,7 @@
   - Puede omitirlo, en este caso basta poner  ``g++ main.cpp``
     Su ejecutable sera de la forma a.out
 
- * Puede mejorar la configuración de VS Code de acuerdo a sus necesidades, por ejemplo, puede revisar  el siguiente
+ * Puede mejorar la configuración de VS Code de acuerdo a sus necesidades, por ejemplo, puede revisar  el siguiente link
 https:www.geeksforgeeks.org/how-to-setup-vscode-with-c-c-and-python-for-competitive-programming/
 
 
@@ -67,5 +67,5 @@ https:www.geeksforgeeks.org/how-to-setup-vscode-with-c-c-and-python-for-competit
    
 
    * Escriba una función que permita incrementar en un número dado por usuario los elementos de un arreglo. Escriba otra función que haga lo mismo pero utilizando
-     la clase vector (``#include <vector>``). Qué direfencia encuentra entre ambas implementaciones (TAREA)
+     la clase vector (``#include <vector>``). Qué diferencia encuentra entre ambas implementaciones (TAREA)
 
